@@ -1,0 +1,4 @@
+| eval metric = metric1
+| eval date = strftime(now(), "%Y-%m-%d")
+| table date, metric, count, percent
+| outputlookup append=true outlookup_table.csv
