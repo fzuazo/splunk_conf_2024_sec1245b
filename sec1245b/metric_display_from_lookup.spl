@@ -1,0 +1,4 @@
+| inputlookup inputlookup_name.csv
+| search metric=metric1
+| eval current_date=strftime(now(),"%Y-%m-%d")
+| where current_date like date
