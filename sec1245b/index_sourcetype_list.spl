@@ -1,0 +1,1 @@
+| tstats count WHERE index=* by index, sourcetype
