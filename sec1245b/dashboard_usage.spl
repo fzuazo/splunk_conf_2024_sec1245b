@@ -1,0 +1,4 @@
+index="_internal" user!="-"  sourcetype=splunkd_ui_access uri_path="*APP/DASHBOARD NAME*"
+| rex field=uri "en-US/app/(?<app>[^/]+)/(?<dashboard>[^?/\s]+)"
+| bucket _time span=1d | stats dc(dashboard) as count by user, app, uri_path, _time
+| sort - _time
