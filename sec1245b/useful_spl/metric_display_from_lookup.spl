@@ -1,0 +1,6 @@
+| inputlookup $inputlookup$.csv
+| search metric=$metric$
+| eval current_date=strftime(now(),"%Y-%m-%d")
+| where current_date like date
+```Replace $inputlookup$ with the name of a valid lookup table```
+```Replace $metric$ with the name of a valid metric from the lookup table```
