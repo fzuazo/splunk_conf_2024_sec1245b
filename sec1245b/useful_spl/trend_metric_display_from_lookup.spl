@@ -1,0 +1,8 @@
+| inputlookup $inputlookup$.csv
+| search metric=$metric$
+| eval _time=strptime(date, "%Y-%m-%d")
+| timechart span=1w avg($metric$) by metric
+| rename $metric$ as $friendly_name$
+```Replace $inputlookup$ with the name of a valid lookup table```
+```Replace $metric$ with the name of a valid metric from the lookup table```
+```Replace $friendly_name$ with a friendly lable```
