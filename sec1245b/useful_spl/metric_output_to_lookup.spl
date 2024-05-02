@@ -1,0 +1,6 @@
+| eval metric = $metric$
+| eval date = strftime(now(), "%Y-%m-%d")
+| table date, metric, count, percent
+| outputlookup append=true $outlookup$.csv
+```Replace $metric$ with the name of a valid metric from the lookup table```
+```Replace $outputlookup$ with the name of the destination lookup table```
