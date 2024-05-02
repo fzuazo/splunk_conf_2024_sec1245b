@@ -1,0 +1,34 @@
+•	Standard naming conventions early on will make expanding the scope of your executive metrics program much easier.
+
+•	Scheduled Searches (replace “Metric” with an appropriate metric name)
+  o	Overall Scores – Metric
+  o	Endpoint – Metric
+  o	IAM – Metric
+  o	Incident Response – Metric
+  o	Network – Metric
+  o	Vulnerability Management – Metric
+
+•	Metrics (replace $metric$ with an appropriate metric name)
+  o	endpoint_$metric$_count
+  o	endpoint_overall_score
+  o	endpoint_$metric$_percent
+  o	iam_$metric$_count
+  o	iam_overall_score
+  o	iam_$metric$_percent
+  o	incident_response_$metric$_count
+  o	incident_response _score
+  o	incident_response_$metric$_percent
+  o	network_$metric$_count
+  o	network _score
+  o	network_$metric$_percent
+  o	vulnerability_management_$metric$_count
+  o	vulnerability_management_score
+  o	vulnerability_management _$metric$_percent
+
+•	Lookup Tables
+  o	overall_scores.csv
+  o	endpoint_metrics.csv
+  o	iam_metrics.csv
+  o	incident_response_metrics.csv
+  o	network_metrics.csv
+  o vulnerability_management_metrics.csv
