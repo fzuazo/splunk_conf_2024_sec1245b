@@ -2,5 +2,3 @@ index="_internal" user!="-"  sourcetype=splunkd_ui_access uri_path="*APP/DASHBOA
 | rex field=uri "en-US/app/(?<app>[^/]+)/(?<dashboard>[^?/\s]+)"
 | bucket _time span=1d | stats dc(dashboard) as count by user, app, uri_path, _time
 | sort - _time
-```Used to check app/dashboard usage```
-```Replace APP/DASHBOARD NAME with the name of your app or dashboards, make sure to leave the leading and trailing wildcards.```
