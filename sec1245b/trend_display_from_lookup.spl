@@ -1,5 +1,0 @@
-| inputlookup inputlookup_table_name.csv
-| search metric=metric1 OR metric=metric2 OR metric3
-| eval _time=strptime(date, "%Y-%m-%d")
-| timechart span=1w avg($) by metric
-| rename $ metric1 as "friendly metric1", metric2 as "friendly metric2", metric3 as "friendly metric3"
