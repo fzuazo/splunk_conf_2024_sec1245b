@@ -1,0 +1,9 @@
+| inputlookup endpoint_metrics.csv
+| search metric=*_percent
+| eval current_date=strftime(now(),"%Y-%m-%d")
+| where current_date like date
+| stats avg(percent) as percent
+| eval metric = "overall_score_endpoint"
+| eval date=strftime(now(),"%Y-%m-%d")
+| table date, metric, percent
+| outputlookup append=true overall_scores.csv
