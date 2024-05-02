@@ -1,4 +1,2 @@
 | tstats count WHERE index=* by index, sourcetype
 | sort - count
-```Lists all indexes and their sourcestypes along with a total count of events in each index/sourcetype pair.```
-```You can also specify specific indexes by replacing the wildcard with an index name```
