@@ -1,0 +1,10 @@
+index="_internal" source="*metrics.log" group=tcpin_connections fwdType=uf
+| stats count as missing_logging_agent_count
+| eval percent = (100-(missing_logging_agent_count/
+[| search $splunk_query_for_total_system_count$
+| stats count as total_system_count 
+| return $total_system_count])*100)
+| eval metric="logging_agent_coverage_percent"
+| eval date=strftime(now(), "%Y-%m-%d")
+| table date, metric, count, percent
+| outputlookup append=true endpoint_metric.csv
