@@ -2,7 +2,11 @@
 
 ## Description
 
-Contains documents, SPL, and slide deck from the Splunk.conf2024 Session SEC1245B "Reading the C-Suite: Crafting a Strategic Narrative Through Executive Metrics"
+This project contains the following:
+
+- Templates for documenting metrics
+- Sample SPL to enable a few metrics
+- Slide deck from the Splunk.conf2024 session entitled **SEC1245B "Reading the C-Suite: Crafting a Strategic Narrative Through Executive Metrics**
 
 ## Authors
 
