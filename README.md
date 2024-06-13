@@ -11,4 +11,6 @@ This project contains the following:
 ## Authors
 
 - Chris Eager
-- Francisco Zuazo
+CEager@Splunk.com
+
+- Francisco Zuazo Francisco.Zuazo@Outlook.com
